@@ -2,8 +2,8 @@ import CV from "@/assets/cv.jpg";
 import cube from "@/assets/cube.gif";
 import Death from "@/assets/death.gif";
 import Human from "@/assets/Const.gif";
-import Cards from "@/commonUI/cards";
-import Card from "@/commonUI/card";
+import About from "@/commonUI/About";
+import Dev from "@/commonUI/Dev";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBg((prev) => (prev + 1) % backgrounds.length);
-    }, 10000);
+    }, 20000);
     return () => clearInterval(interval);
   }, []);
 
@@ -39,10 +39,8 @@ function App() {
 
       <div className="absolute inset-0 bg-black/0" />
 
-      {/* Contenedor principal centrado horizontalmente */}
       <div className="w-screen flex justify-center relative z-10">
         <div className="flex flex-col items-center justify-center w-full max-w-6xl gap-10">
-          {/* Hero */}
           <section className="flex flex-col items-center justify-center text-center gap-6 p-6">
             <motion.h1
               initial={{ opacity: 0, y: -20 }}
@@ -77,8 +75,8 @@ function App() {
 
           {/* Contenido extra */}
           <div className="flex flex-col gap-8 items-center w-full max-w-4xl">
-            <Cards />
-            <Card />
+            <About />
+            <Dev />
           </div>
         </div>
       </div>

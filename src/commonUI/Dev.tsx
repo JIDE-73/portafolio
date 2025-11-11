@@ -151,7 +151,7 @@ function FlipCard({ logo }: { logo: LogoInfo }) {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(34,211,238,0.3)" }}
-      className="relative w-44 h-60 cursor-pointer perspective"
+      className="relative w-44 h-60 cursor-pointer perspective rounded-3xl"
       onClick={() => setFlipped(!flipped)}
     >
       <motion.div
@@ -198,7 +198,7 @@ function FlipCard({ logo }: { logo: LogoInfo }) {
 // 🌌 Componente principal
 export default function C_Card() {
   return (
-    <div className="flex flex-col gap-16 p-10">
+    <div className="flex flex-col gap-16 p-10 rounded-3xl">
       {groups.map((group, i) => (
         <motion.div
           key={group.category}
